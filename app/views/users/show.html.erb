@@ -1,0 +1,12 @@
+<h1>プロフィール</h1>
+  <p><%= @user.name %>のページ</p>
+  <p>メールアドレス<%= @user.email %></p>
+
+  <% if @user.image.present? %>
+    <p class="sample">
+      <strong>プロフィール</strong>
+      <%= image_tag @user.image.url %>
+    </p>
+  <% end %>
+  <%= link_to "一覧画面にもどる", pictures_path %>
+  <%= link_to 'Edit', edit_user_path(@user) %>

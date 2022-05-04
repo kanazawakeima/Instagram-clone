@@ -1,0 +1,47 @@
+
+
+body {
+  margin: 0 auto;
+  background-color: #FFEEFF;
+}
+
+header {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px 40px;
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+    box-sizing: border-box;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Homemade Apple', cursive;
+    text-indent: 1em;
+  }
+
+.logo {
+    width: 50px;
+    margin: 0;
+}
+
+.sample img {
+    width: 100px;
+}
+
+.push {
+  height: 100px;
+}
+
+
+
+footer {
+  background-color: #808080;
+  width: 100%;
+    color: #fff;
+    text-align: center;
+    height: 100px;
+    margin-bottom: -100px;
+
+    position: absolute;
+    bottom: 0;
+}
