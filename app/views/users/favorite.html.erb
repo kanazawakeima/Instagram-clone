@@ -1,0 +1,8 @@
+<h1>お気に入り一覧</h1>
+
+
+<% @favorite_all.each do |favorite| %>
+  <tr>
+    <td><%= image_tag(favorite.image.url)%><td>
+  </tr>
+<% end %>
