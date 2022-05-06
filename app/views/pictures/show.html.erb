@@ -17,6 +17,7 @@
     <%= link_to 'お気に入りする', favorites_path(picture_id: @picture.id), method: :post, class: 'btn btn-primary' %>
   <% end %>
 <% end %>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<% if @picture.user == current_user %>
+<%= link_to 'Edit', edit_picture_path(@picture) %>
+<% end %> |
 <%= link_to 'Back', pictures_path %>
