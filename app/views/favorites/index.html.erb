@@ -1,0 +1,26 @@
+<h1>Favorite Pictures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tittle</th>
+      <th>Image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+
+      <tr>
+        <td><%= favorite.picture.tittle %></td>
+        <td class="sample"><%= image_tag favorite.picture.image.url if favorite.picture.present?%></td>
+        <td><%= favorite.user.name %></td>
+        <td><%= link_to 'Show', picture_path(favorite.picture.id) %></td>
+        <td><%= link_to 'Edit', edit_picture_path(favorite.picture.id) %></td>
+        <td><%= link_to 'Destroy', picture_path(favorite.picture.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

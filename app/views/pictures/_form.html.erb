@@ -16,7 +16,7 @@
     <%= form.text_field :tittle %>
   </div>
 
-  <div class="field">
+  <div class="sample">
     <%= form.label :image %>
     <%= image_tag(picture.image.url) if picture.image && picture.image.url %>
     <%= form.file_field :image %>

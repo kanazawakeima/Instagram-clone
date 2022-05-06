@@ -23,6 +23,7 @@ class PicturesController < ApplicationController
   end
 
   def edit
+
     redirect_to pictures_path unless current_user.id == @picture.user_id
   end
 
@@ -63,11 +64,12 @@ class PicturesController < ApplicationController
   end
 
   private
-    def set_picture
-      @picture = Picture.find(params[:id])
-    end
+  
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
 
-    def picture_params
-      params.require(:picture).permit(:tittle, :image, :image_cache,)
-    end
+  def picture_params
+    params.require(:picture).permit(:tittle, :image, :image_cache,)
+  end
 end

@@ -16,7 +16,7 @@
     <% @pictures.each do |picture| %>
       <tr>
         <td><%= picture.tittle %></td>
-        <td class="sample"><%= image_tag picture.image.url %></td>
+        <td class="sample"><%= image_tag picture.image.url if picture.image.present?%></td>
         <td><%= picture.user.name %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
