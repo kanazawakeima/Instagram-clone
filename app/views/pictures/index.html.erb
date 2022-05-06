@@ -19,8 +19,10 @@
         <td class="sample"><%= image_tag picture.image.url if picture.image.present?%></td>
         <td><%= picture.user.name %></td>
         <td><%= link_to 'Show', picture %></td>
+        <% if picture.user == current_user %>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
